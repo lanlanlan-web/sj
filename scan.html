@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="referrer" content="no-referrer">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-zkAIJwUpgu3YKTQXXu1h5J6LV+Dw94DuZdW5OY5w/nA='; connect-src 'none'; img-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; child-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-bjW5+6PJ8u2im8lM43mxyDzwYvn8yFyCH/+N0hPdZmg='; connect-src 'none'; img-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; child-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none';">
     <title>扫码结果</title>
     <style>
         * {
@@ -130,6 +130,11 @@
     <script>
         (() => {
             'use strict';
+
+            if (window.top !== window.self) {
+                window.top.location = window.self.location.href;
+                return;
+            }
 
             const params = new URLSearchParams(location.hash.slice(1));
             const code = params.get('c') || '';
