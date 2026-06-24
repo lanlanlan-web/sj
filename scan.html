@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="referrer" content="no-referrer">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-bjW5+6PJ8u2im8lM43mxyDzwYvn8yFyCH/+N0hPdZmg='; connect-src 'none'; img-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; child-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-pckRFYL+lNS6nXsxhyqVgAJa9ACjliQj6O8DLUypQ9A='; connect-src 'none'; img-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; child-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none';">
     <title>扫码结果</title>
     <style>
         * {
@@ -136,11 +136,6 @@
                 return;
             }
 
-            const params = new URLSearchParams(location.hash.slice(1));
-            const code = params.get('c') || '';
-            const expiresAtText = params.get('e') || '';
-            const validCode = /^\d{4}$/.test(code);
-            const validExpiry = /^\d{13}$/.test(expiresAtText);
             const resultCard = document.getElementById('resultCard');
             const passwordLabel = document.getElementById('passwordLabel');
             const passwordValue = document.getElementById('passwordValue');
@@ -153,18 +148,33 @@
                 statusMessage.textContent = '';
             };
 
-            if (!validCode || !validExpiry) {
-                showError('二维码无效');
-                return;
+            function renderFromFragment() {
+                resultCard.classList.remove('error');
+                passwordLabel.textContent = '密码：';
+                passwordValue.textContent = '';
+                statusMessage.textContent = '请将密码输入电脑端完成验证';
+
+                const params = new URLSearchParams(location.hash.slice(1));
+                const code = params.get('c') || '';
+                const expiresAtText = params.get('e') || '';
+                const validCode = /^\d{4}$/.test(code);
+                const validExpiry = /^\d{13}$/.test(expiresAtText);
+                if (!validCode || !validExpiry) {
+                    showError('二维码无效');
+                    return;
+                }
+
+                const expiresAt = Number(expiresAtText);
+                if (!Number.isSafeInteger(expiresAt) || Date.now() > expiresAt) {
+                    showError('二维码已过期，请在电脑端刷新');
+                    return;
+                }
+
+                passwordValue.textContent = code;
             }
 
-            const expiresAt = Number(expiresAtText);
-            if (!Number.isSafeInteger(expiresAt) || Date.now() > expiresAt) {
-                showError('二维码已过期，请在电脑端刷新');
-                return;
-            }
-
-            passwordValue.textContent = code;
+            window.addEventListener('hashchange', renderFromFragment);
+            renderFromFragment();
         })();
     </script>
 </body>
