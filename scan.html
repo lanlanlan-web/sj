@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-zkAIJwUpgu3YKTQXXu1h5J6LV+Dw94DuZdW5OY5w/nA='; connect-src 'none'; img-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; child-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none';">
+    <title>扫码结果</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            background: #f5f6f8;
+            color: #222;
+            font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 18px;
+        }
+
+        .result-card {
+            width: min(100%, 620px);
+            background: #fff;
+            border: 1px solid #e3e6eb;
+            box-shadow: 0 3px 14px rgba(15, 23, 42, 0.08);
+        }
+
+        .result-title {
+            margin: 0;
+            padding: 28px 20px;
+            border-bottom: 1px solid #e8ebef;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .result-body {
+            padding: 28px 30px 34px;
+        }
+
+        .password-panel {
+            min-height: 98px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #cfd3d8;
+            background: #f4f4f4;
+            padding: 18px;
+            text-align: center;
+        }
+
+        .password-label,
+        .password-value {
+            color: #48c600;
+            font-size: clamp(30px, 8vw, 48px);
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: 0;
+        }
+
+        .password-value {
+            margin-left: 16px;
+            letter-spacing: 8px;
+        }
+
+        .status-message {
+            margin: 18px 0 0;
+            color: #64748b;
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .result-card.error .password-panel {
+            border-color: #fecaca;
+            background: #fff7f7;
+        }
+
+        .result-card.error .password-label,
+        .result-card.error .password-value {
+            color: #dc2626;
+            font-size: 24px;
+            letter-spacing: 0;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+                background: #fff;
+            }
+
+            .result-card {
+                min-height: 100vh;
+                border: 0;
+                box-shadow: none;
+            }
+
+            .result-body {
+                padding: 24px 18px;
+            }
+
+            .password-value {
+                margin-left: 10px;
+                letter-spacing: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="result-card" id="resultCard">
+        <h1 class="result-title">扫码结果</h1>
+        <section class="result-body">
+            <div class="password-panel">
+                <span class="password-label" id="passwordLabel">密码：</span>
+                <span class="password-value" id="passwordValue"></span>
+            </div>
+            <p class="status-message" id="statusMessage">请将密码输入电脑端完成验证</p>
+        </section>
+    </main>
+    <script>
+        (() => {
+            'use strict';
+
+            const params = new URLSearchParams(location.hash.slice(1));
+            const code = params.get('c') || '';
+            const expiresAtText = params.get('e') || '';
+            const validCode = /^\d{4}$/.test(code);
+            const validExpiry = /^\d{13}$/.test(expiresAtText);
+            const resultCard = document.getElementById('resultCard');
+            const passwordLabel = document.getElementById('passwordLabel');
+            const passwordValue = document.getElementById('passwordValue');
+            const statusMessage = document.getElementById('statusMessage');
+
+            const showError = (message) => {
+                resultCard.classList.add('error');
+                passwordLabel.textContent = '';
+                passwordValue.textContent = message;
+                statusMessage.textContent = '';
+            };
+
+            if (!validCode || !validExpiry) {
+                showError('二维码无效');
+                return;
+            }
+
+            const expiresAt = Number(expiresAtText);
+            if (!Number.isSafeInteger(expiresAt) || Date.now() > expiresAt) {
+                showError('二维码已过期，请在电脑端刷新');
+                return;
+            }
+
+            passwordValue.textContent = code;
+        })();
+    </script>
+</body>
+</html>
