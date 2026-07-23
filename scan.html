@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="referrer" content="no-referrer">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-pckRFYL+lNS6nXsxhyqVgAJa9ACjliQj6O8DLUypQ9A='; connect-src 'none'; img-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; child-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'sha256-9QC499KQXuW5ScBYvoYAmIF0Nz04Qp0r7h9U89orrmQ='; connect-src 'none'; img-src 'none'; font-src 'none'; media-src 'none'; object-src 'none'; child-src 'none'; frame-src 'none'; worker-src 'none'; manifest-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none';">
     <title>扫码结果</title>
     <style>
         * {
@@ -15,8 +15,10 @@
         body {
             margin: 0;
             min-height: 100%;
-            background: #f5f6f8;
-            color: #222;
+            background:
+                radial-gradient(circle at 20% 8%, rgba(34, 197, 94, 0.20), transparent 30%),
+                linear-gradient(180deg, #f4fff8 0%, #ecfdf5 42%, #ffffff 100%);
+            color: #0f172a;
             font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
         }
 
@@ -25,60 +27,151 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 18px;
+            padding: 28px 18px;
+        }
+
+        .scan-shell {
+            width: min(100%, 620px);
         }
 
         .result-card {
-            width: min(100%, 620px);
-            background: #fff;
-            border: 1px solid #e3e6eb;
-            box-shadow: 0 3px 14px rgba(15, 23, 42, 0.08);
+            width: 100%;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #c7f4d6;
+            border-radius: 24px;
+            box-shadow: 0 22px 50px rgba(15, 118, 65, 0.18);
         }
 
         .result-title {
             margin: 0;
-            padding: 28px 20px;
-            border-bottom: 1px solid #e8ebef;
+            padding: 34px 20px 14px;
+            background: linear-gradient(135deg, #f7fff9 0%, #e8fbef 100%);
             text-align: center;
-            font-size: 24px;
-            font-weight: 700;
+            font-size: clamp(30px, 8vw, 46px);
+            font-weight: 800;
+            letter-spacing: 0;
         }
 
         .result-body {
-            padding: 28px 30px 34px;
+            padding: 16px 24px 42px;
         }
 
-        .password-panel {
-            min-height: 98px;
+        .verification-header {
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid #cfd3d8;
-            background: #f4f4f4;
-            padding: 18px;
-            text-align: center;
+            gap: 10px;
+            margin: 0 auto 28px;
+            width: fit-content;
+            padding: 9px 16px;
+            border: 1px solid #bbf7d0;
+            border-radius: 999px;
+            background: rgba(240, 253, 244, 0.92);
+            color: #15803d;
+            font-size: 16px;
+            font-weight: 700;
         }
 
-        .password-label,
-        .password-value {
-            color: #48c600;
-            font-size: clamp(30px, 8vw, 48px);
-            font-weight: 800;
+        .check-mark {
+            width: 32px;
+            height: 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            background: #dcfce7;
+            color: #16a34a;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .result-badge {
+            display: inline-flex;
+        }
+
+        .password-panel {
+            min-height: 168px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #86efac;
+            border-radius: 20px;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(240, 253, 244, 0.92)),
+                #f7fdf9;
+            padding: 26px 18px;
+            text-align: center;
+            box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.08), 0 14px 30px rgba(22, 163, 74, 0.12);
+        }
+
+        .password-card {
+            position: relative;
+        }
+
+        .password-card::before {
+            content: "";
+            position: absolute;
+            inset: 14px;
+            border: 1px dashed rgba(34, 197, 94, 0.22);
+            border-radius: 16px;
+            pointer-events: none;
+        }
+
+        .password-label {
+            margin-bottom: 18px;
+            color: #15803d;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .password-digits {
+            min-height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: #22c55e;
+            font-size: clamp(36px, 10vw, 56px);
+            font-weight: 900;
             line-height: 1.2;
             letter-spacing: 0;
         }
 
-        .password-value {
-            margin-left: 16px;
-            letter-spacing: 8px;
+        .digit-box {
+            width: clamp(54px, 15vw, 74px);
+            height: clamp(64px, 17vw, 82px);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #bbf7d0;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: inset 0 0 0 1px rgba(34, 197, 94, 0.08), 0 10px 22px rgba(22, 163, 74, 0.10);
         }
 
         .status-message {
-            margin: 18px 0 0;
+            display: none;
+            margin: 22px 0 0;
             color: #64748b;
             text-align: center;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 1.7;
+        }
+
+        .result-card.error {
+            border-color: #fecaca;
+            box-shadow: 0 16px 36px rgba(220, 38, 38, 0.12);
+        }
+
+        .result-card.error .verification-header {
+            color: #b91c1c;
+        }
+
+        .result-card.error .check-mark {
+            background: #fee2e2;
+            color: #dc2626;
         }
 
         .result-card.error .password-panel {
@@ -86,47 +179,64 @@
             background: #fff7f7;
         }
 
-        .result-card.error .password-label,
-        .result-card.error .password-value {
+        .result-card.error .password-digits {
             color: #dc2626;
-            font-size: 24px;
-            letter-spacing: 0;
+            font-size: 22px;
+        }
+
+        .result-card.error .status-message {
+            display: block;
         }
 
         @media (max-width: 480px) {
             body {
                 padding: 0;
-                background: #fff;
+                background: #ffffff;
+            }
+
+            .scan-shell,
+            .result-card {
+                width: 100%;
             }
 
             .result-card {
                 min-height: 100vh;
                 border: 0;
+                border-radius: 0;
                 box-shadow: none;
             }
 
-            .result-body {
-                padding: 24px 18px;
+            .result-title {
+                padding: 44px 18px 14px;
             }
 
-            .password-value {
-                margin-left: 10px;
-                letter-spacing: 5px;
+            .result-body {
+                padding: 18px 18px 36px;
+            }
+
+            .password-digits {
+                gap: 8px;
             }
         }
     </style>
 </head>
 <body>
-    <main class="result-card" id="resultCard">
-        <h1 class="result-title">扫码结果</h1>
-        <section class="result-body">
-            <div class="password-panel">
-                <span class="password-label" id="passwordLabel">密码：</span>
-                <span class="password-value" id="passwordValue"></span>
-            </div>
-            <p class="status-message" id="statusMessage">请将密码输入电脑端完成验证</p>
-        </section>
-    </main>
+    <div class="scan-shell">
+        <main class="result-card" id="resultCard">
+            <h1 class="result-title">扫码结果</h1>
+            <section class="result-body">
+                <div class="verification-header result-badge">
+                <span class="check-mark" id="statusIcon">✓</span>
+                <span id="statusTitle">校验通过</span>
+                </div>
+                <div class="password-panel password-card">
+                    <span class="password-label" id="passwordLabel">密码</span>
+                    <span class="password-digits" id="passwordValue"></span>
+                </div>
+                <p class="status-message" id="statusMessage"></p>
+            </section>
+        </main>
+    </div>
     <script>
         (() => {
             'use strict';
@@ -140,19 +250,39 @@
             const passwordLabel = document.getElementById('passwordLabel');
             const passwordValue = document.getElementById('passwordValue');
             const statusMessage = document.getElementById('statusMessage');
+            const statusIcon = document.getElementById('statusIcon');
+            const statusTitle = document.getElementById('statusTitle');
+
+            const clearDigits = () => {
+                passwordValue.textContent = '';
+            };
+
+            const renderCode = (code) => {
+                clearDigits();
+                for (const digit of code) {
+                    const box = document.createElement('span');
+                    box.className = 'digit-box';
+                    box.textContent = digit;
+                    passwordValue.appendChild(box);
+                }
+            };
 
             const showError = (message) => {
                 resultCard.classList.add('error');
-                passwordLabel.textContent = '';
+                statusIcon.textContent = '!';
+                statusTitle.textContent = '校验失败';
+                passwordLabel.textContent = '提示';
                 passwordValue.textContent = message;
                 statusMessage.textContent = '';
             };
 
             function renderFromFragment() {
                 resultCard.classList.remove('error');
-                passwordLabel.textContent = '密码：';
-                passwordValue.textContent = '';
-                statusMessage.textContent = '请将密码输入电脑端完成验证';
+                statusIcon.textContent = '✓';
+                statusTitle.textContent = '校验通过';
+                passwordLabel.textContent = '密码';
+                clearDigits();
+                statusMessage.textContent = '';
 
                 const params = new URLSearchParams(location.hash.slice(1));
                 const code = params.get('c') || '';
@@ -166,11 +296,11 @@
 
                 const expiresAt = Number(expiresAtText);
                 if (!Number.isSafeInteger(expiresAt) || Date.now() > expiresAt) {
-                    showError('二维码已过期，请在电脑端刷新');
+                    showError('二维码已过期');
                     return;
                 }
 
-                passwordValue.textContent = code;
+                renderCode(code);
             }
 
             window.addEventListener('hashchange', renderFromFragment);
