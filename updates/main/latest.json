@@ -5,18 +5,18 @@
   "version": "3.1.0.93",
   "package_mode": "installer",
   "package_file_name": "sfzcx_installer_update_3.1.0.93.zip",
-  "package_size_bytes": 149492340,
-  "package_sha256": "b799ddee8d423e009d624894d35497fcbeca1f281cb7b96f7d52030adaa5a2d8",
+  "package_size_bytes": 149494618,
+  "package_sha256": "35a5b5b175786ff11488267b6c8728e804f6e03d7f9027693cb7b46592953c0d",
   "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.93/sfzcx_installer_update_3.1.0.93.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 157696508,
-    "sha256": "70261d1e4e6f27b91770662cfe16a2c3db01a17502c8394f92c1ae824deced32"
+    "size_bytes": 157696527,
+    "sha256": "4ffd3b0fbda356bc00ce3069959404d0d7e6dfe804c33aedcd8e9d7bf22f39f5"
   },
   "installer_package": {
     "file_name": "身份查询与签到管理系统_3.1.0.93_安装程序.exe",
-    "size_bytes": 149985068,
-    "sha256": "052846c6764b81f0e81121ef1d7fe1b6783a05635cd9b8463c2719411986cc79"
+    "size_bytes": 149987343,
+    "sha256": "c9438e1ed34524122950cd3820f127f60d1a6c33ceef10464c5400ddfbad4a5a"
   },
   "release_notes": [
     {
@@ -32,9 +32,9 @@
       ]
     }
   ],
-  "published_at": "2026-09-14T12:47:25Z",
+  "published_at": "2026-09-14T12:54:26Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "3exT0fM6Yv6E+OF3guKorliVXNpz0xthRF/dwozGcPLSrqr5cE7wo/2fD8/+hb6PYRgBt8kSg7zqyUtVzqCLAA=="
+    "value": "KIoBjvMsjCE/JZa2dFUIaudYJ39ydoddlfqFqB9ESGAtMyvctXuwUcMJVyH28I14hFl5YDDs6r21ViBqoT08Ag=="
   }
 }
