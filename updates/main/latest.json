@@ -2,33 +2,33 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.94",
+  "version": "3.1.0.95",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.94.zip",
-  "package_size_bytes": 149494078,
-  "package_sha256": "f13546fd6c6a4ac7e21120f3d8480b8c25e26cc3629dc4c1436d473125518438",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.94/sfzcx_installer_update_3.1.0.94.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.95.zip",
+  "package_size_bytes": 149491742,
+  "package_sha256": "53ddc821557090075d22f71f964562e9f6c175ba006bd27d80ee907488e4f339",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.95/sfzcx_installer_update_3.1.0.95.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 157696846,
-    "sha256": "7ce263f37807ef74194e20b6df837d851158861d76ca4fae412c6f342711046b"
+    "size_bytes": 157696879,
+    "sha256": "e1625b8ca520c37b8bfeb52b3dbd66480a9fd2a5145747cbed00d9441a8789ca"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.94_安装程序.exe",
-    "size_bytes": 149986769,
-    "sha256": "bcba2a611fe3f529f9e71ca3605ad8eceef257da3671262c7745fe8e02b18790"
+    "file_name": "身份查询与签到管理系统_3.1.0.95_安装程序.exe",
+    "size_bytes": 149984753,
+    "sha256": "0a919b87389a2845c04f1098d4aeefb6e6c38002d0a70c14cd522960d2687192"
   },
   "release_notes": [
     {
-      "title": "优化内容",
+      "title": "更新说明",
       "items": [
-        "提升版本并重新发布，已安装 3.1.0.93 的主程序可通过 GitHub 自动更新通道接收本版本。"
+        "本版本仅提升版本号，用于测试 GitHub 在线升级下载速度，业务功能保持不变。"
       ]
     }
   ],
-  "published_at": "2026-09-14T17:24:45Z",
+  "published_at": "2026-09-14T17:46:03Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "Kqs9+zf5dD6m+PhR+SXJ4bVlNSGj69VNG/NOyBkHSDvtJwZaC+b4ol7ARH0V6LxaeA8uDqrI7ZprrXgEg752BQ=="
+    "value": "J3etszW4hPZCCk+NMvWy4CDcatlvaByzzPBOhoNj+ujkmwCjvyRJRuiperc1v63gK2nK8CAPA7DlAJCCY9riBA=="
   }
 }
