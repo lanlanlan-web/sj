@@ -2,39 +2,33 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.93",
+  "version": "3.1.0.94",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.93.zip",
-  "package_size_bytes": 149492796,
-  "package_sha256": "920a95a352561e9a6c2428601db0994c69abb4b103511b76b50a78e1bd60e1c5",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.93/sfzcx_installer_update_3.1.0.93.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.94.zip",
+  "package_size_bytes": 149494078,
+  "package_sha256": "f13546fd6c6a4ac7e21120f3d8480b8c25e26cc3629dc4c1436d473125518438",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.94/sfzcx_installer_update_3.1.0.94.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 157696778,
-    "sha256": "8378a50e68112ea4985b28593f36bf88034e1806a23069c772e6c77b806952a6"
+    "size_bytes": 157696846,
+    "sha256": "7ce263f37807ef74194e20b6df837d851158861d76ca4fae412c6f342711046b"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.93_安装程序.exe",
-    "size_bytes": 149986771,
-    "sha256": "4a59fa80535074298b2f6df51efbeeaa39ffc6808a1d478bd1b8fe211556a4f2"
+    "file_name": "身份查询与签到管理系统_3.1.0.94_安装程序.exe",
+    "size_bytes": 149986769,
+    "sha256": "bcba2a611fe3f529f9e71ca3605ad8eceef257da3671262c7745fe8e02b18790"
   },
   "release_notes": [
     {
-      "title": "新增功能",
-      "items": [
-        "新增 GitHub 自动更新通道，登录后主动检查已发布版本，无需在云控中再次上传升级包和手动推送。"
-      ]
-    },
-    {
       "title": "优化内容",
       "items": [
-        "更新下载优先使用 GitHub，连接失败时继续检查蓝奏云和云控备用通道；升级包仍执行数字签名、大小和 SHA-256 校验。"
+        "提升版本并重新发布，已安装 3.1.0.93 的主程序可通过 GitHub 自动更新通道接收本版本。"
       ]
     }
   ],
-  "published_at": "2026-09-14T16:58:15Z",
+  "published_at": "2026-09-14T17:24:45Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "Y1d+s5x6mpLoG0APFGu7xM/NjqGFvX2079m+4W6v3TdNeLp/cSbSqS9UaWx2Biqkh4nvk19fS46yD5gBlaQ7Bg=="
+    "value": "Kqs9+zf5dD6m+PhR+SXJ4bVlNSGj69VNG/NOyBkHSDvtJwZaC+b4ol7ARH0V6LxaeA8uDqrI7ZprrXgEg752BQ=="
   }
 }
