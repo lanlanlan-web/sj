@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "sfzcx-github-update-channel",
+  "app_id": "sfzcx-main",
+  "version": "3.1.0.93",
+  "package_mode": "installer",
+  "package_file_name": "sfzcx_installer_update_3.1.0.93.zip",
+  "package_size_bytes": 149492340,
+  "package_sha256": "b799ddee8d423e009d624894d35497fcbeca1f281cb7b96f7d52030adaa5a2d8",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.93/sfzcx_installer_update_3.1.0.93.zip",
+  "main_executable": {
+    "file_name": "身份查询与签到管理系统.exe",
+    "size_bytes": 157696508,
+    "sha256": "70261d1e4e6f27b91770662cfe16a2c3db01a17502c8394f92c1ae824deced32"
+  },
+  "installer_package": {
+    "file_name": "身份查询与签到管理系统_3.1.0.93_安装程序.exe",
+    "size_bytes": 149985068,
+    "sha256": "052846c6764b81f0e81121ef1d7fe1b6783a05635cd9b8463c2719411986cc79"
+  },
+  "release_notes": [
+    {
+      "title": "新增功能",
+      "items": [
+        "新增 GitHub 自动更新通道，登录后主动检查已发布版本，无需在云控中再次上传升级包和手动推送。"
+      ]
+    },
+    {
+      "title": "优化内容",
+      "items": [
+        "更新下载优先使用 GitHub，连接失败时继续检查蓝奏云和云控备用通道；升级包仍执行数字签名、大小和 SHA-256 校验。"
+      ]
+    }
+  ],
+  "published_at": "2026-09-14T12:47:25Z",
+  "signature": {
+    "algorithm": "ed25519",
+    "value": "3exT0fM6Yv6E+OF3guKorliVXNpz0xthRF/dwozGcPLSrqr5cE7wo/2fD8/+hb6PYRgBt8kSg7zqyUtVzqCLAA=="
+  }
+}
