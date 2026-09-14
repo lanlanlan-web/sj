@@ -2,39 +2,34 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-vpn",
-  "version": "3.1.0.95",
+  "version": "3.1.0.96",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_vpn_installer_update_3.1.0.95.zip",
-  "package_size_bytes": 20374282,
-  "package_sha256": "2fdcb67d8112c7b0da7b697409b6c2b29c2b2d75c7100d67a264ca6a11a024d1",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.95/sfzcx_vpn_installer_update_3.1.0.95.zip",
+  "package_file_name": "sfzcx_vpn_installer_update_3.1.0.96.zip",
+  "package_size_bytes": 20374980,
+  "package_sha256": "eaadc990eddccd884db382d90c7a8eae3327754b8953f01fcc42ff8c0250963e",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.96/sfzcx_vpn_installer_update_3.1.0.96.zip",
   "main_executable": {
     "file_name": "VPN启动器.exe",
-    "size_bytes": 27766269,
-    "sha256": "4ea2a3ecaee275c38602bb184f1d0e8decc75e8426b26f642604b63a4bce268e"
+    "size_bytes": 27767338,
+    "sha256": "4fd7990c5a2175d3b34864291b6b600b44514c57ada5c31865797b0a6b77287e"
   },
   "installer_package": {
-    "file_name": "VPN启动器_3.1.0.95_安装程序.exe",
-    "size_bytes": 20886068,
-    "sha256": "40bff95a387e7f0deef507816d4c384daf4b08a3e84da6ebcafd45687a8575fc"
+    "file_name": "VPN启动器_3.1.0.96_安装程序.exe",
+    "size_bytes": 20887110,
+    "sha256": "92aa61afc34de9260ce931df80b932a1adafa75560b1243a3db39a6bda346d27"
   },
   "release_notes": [
     {
-      "title": "新增功能",
-      "items": [
-        "新增GitHub自动更新通道，登录后主动检查已发布版本，无需在云控中再次上传升级包和手动推送。"
-      ]
-    },
-    {
       "title": "优化内容",
       "items": [
-        "正式界面对齐已确认模板，密码显示按钮合并到输入框内，登录按钮文字居中；更新下载优先使用GitHub，失败时继续使用蓝奏云和云控备用通道。"
+        "记住密码改为清晰的绿色勾选样式，不再受Windows主题影响显示为叉号。",
+        "登录、查看日志和退出VPN按钮文字严格居中，登录按钮移除造成视觉偏移的箭头。"
       ]
     }
   ],
-  "published_at": "2026-09-14T16:58:22Z",
+  "published_at": "2026-09-14T17:35:29Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "eJtq49QBVQ+yXX++I273fvbDQk8iK7inwxLu4no/sq7T3KXPk/5I8XBxHf3DsHXlgxWBOARjQ06AOcqBzKz4Dg=="
+    "value": "ejwFTtbSa24MjZ1NXcT3XvbRso41dHYOFH3/AmvSETaKDCYJtPgmw+1HYwJzlqp89Y38cS6vFJB87uAbPuD0Cg=="
   }
 }
