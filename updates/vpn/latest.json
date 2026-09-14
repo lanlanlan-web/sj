@@ -5,18 +5,18 @@
   "version": "3.1.0.95",
   "package_mode": "installer",
   "package_file_name": "sfzcx_vpn_installer_update_3.1.0.95.zip",
-  "package_size_bytes": 20373835,
-  "package_sha256": "1c5c64e2de6e3b4aefa855bd1da4eff57120e9f2d9f8faab11544f868102b1a5",
+  "package_size_bytes": 20374500,
+  "package_sha256": "4c2ecf84b25df3528a50871ecaf1045c0b4a6a67e674754a3c65b076abeec6a2",
   "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.95/sfzcx_vpn_installer_update_3.1.0.95.zip",
   "main_executable": {
     "file_name": "VPN启动器.exe",
-    "size_bytes": 27766066,
-    "sha256": "4f102115220c58a1c90d8d4b6a85a50144bf645fb96a9889279af3291cfc8187"
+    "size_bytes": 27766087,
+    "sha256": "a67586286d7b04ad809e929f9e56a56aefa06f94ece01d70fe0d55ccadb9dae5"
   },
   "installer_package": {
     "file_name": "VPN启动器_3.1.0.95_安装程序.exe",
-    "size_bytes": 20885679,
-    "sha256": "5612798877ad82be5cbab64bcb1b9ead100392af78db990847119f41afeaef6a"
+    "size_bytes": 20886319,
+    "sha256": "74ffa884cd0d4b3077b39c18d7ee7ed1e65d8dd7e85106d19d3ab4a2b0b24e01"
   },
   "release_notes": [
     {
@@ -32,9 +32,9 @@
       ]
     }
   ],
-  "published_at": "2026-09-14T12:47:36Z",
+  "published_at": "2026-09-14T12:54:40Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "0Hhpea9c2mJPD+cFJpjkJZ86H1zjaIuZ96DTO3WwVU9a5h2xdDCLL5gwYfU5cWIKiXiFKB05Lj3z0cfyxaUlCA=="
+    "value": "gICzQoqK26LTVHhsigxBXwroFyTTRIkwiFvyXIBIppnksyvzPC0ymhPlmW17c/3VyFqEPuRJK8gkN5MwSvDdBw=="
   }
 }
