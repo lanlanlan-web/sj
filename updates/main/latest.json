@@ -2,33 +2,40 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.95",
+  "version": "3.1.0.96",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.95.zip",
-  "package_size_bytes": 149491742,
-  "package_sha256": "53ddc821557090075d22f71f964562e9f6c175ba006bd27d80ee907488e4f339",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.95/sfzcx_installer_update_3.1.0.95.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.96.zip",
+  "package_size_bytes": 149498846,
+  "package_sha256": "1d465a6fbde0e4707587617cfc3803afb459258fd819f683f8d978a3504fa9d3",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.96/sfzcx_installer_update_3.1.0.96.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 157696879,
-    "sha256": "e1625b8ca520c37b8bfeb52b3dbd66480a9fd2a5145747cbed00d9441a8789ca"
+    "size_bytes": 157702813,
+    "sha256": "6f43be791b91cb7ca5f7887637493973d705172f91e24e9c3aeb2178b0efd823"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.95_安装程序.exe",
-    "size_bytes": 149984753,
-    "sha256": "0a919b87389a2845c04f1098d4aeefb6e6c38002d0a70c14cd522960d2687192"
+    "file_name": "身份查询与签到管理系统_3.1.0.96_安装程序.exe",
+    "size_bytes": 149992592,
+    "sha256": "57af72697d4266d5807454e175584ae24c9001db21ed7f1c3cc121c601365dd4"
   },
   "release_notes": [
     {
-      "title": "更新说明",
+      "title": "新增功能",
       "items": [
-        "本版本仅提升版本号，用于测试 GitHub 在线升级下载速度，业务功能保持不变。"
+        "登录成功后、软件许可协议前新增摄像头身份确认，支持选择 USB 摄像头或电脑内置摄像头，完成首次拍照并成功上传后才能继续。",
+        "进入主系统后每隔15分钟自动抓拍并上传云控，界面持续显示摄像头监控状态，照片不关联考生信息。"
+      ]
+    },
+    {
+      "title": "优化内容",
+      "items": [
+        "云控新增摄像头记录栏目，按考点区分首次拍照和定时抓拍；照片仅授权管理员可查看和删除。"
       ]
     }
   ],
-  "published_at": "2026-09-14T17:46:03Z",
+  "published_at": "2026-09-15T15:23:20Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "J3etszW4hPZCCk+NMvWy4CDcatlvaByzzPBOhoNj+ujkmwCjvyRJRuiperc1v63gK2nK8CAPA7DlAJCCY9riBA=="
+    "value": "rZB3qwFy7rwbvkB/tU5TGyRLR+u/g++HiokGmJ8nLUDjGru4NTHpZ1HMiNNnGY8uBow3jdxj9lbsI4zwSMKGCw=="
   }
 }
