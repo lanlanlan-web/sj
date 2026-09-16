@@ -2,34 +2,33 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-vpn",
-  "version": "3.1.0.97",
+  "version": "3.1.0.98",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_vpn_installer_update_3.1.0.97.zip",
-  "package_size_bytes": 20375046,
-  "package_sha256": "7e9a9e3684c801d9f76575a8053ba4eb22113a069dec617972a36ea4a42d20bb",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.97/sfzcx_vpn_installer_update_3.1.0.97.zip",
+  "package_file_name": "sfzcx_vpn_installer_update_3.1.0.98.zip",
+  "package_size_bytes": 20375418,
+  "package_sha256": "aa56973371360d1571d2b51b4482bee5d26faf862c1ed09242136042404519e1",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.98/sfzcx_vpn_installer_update_3.1.0.98.zip",
   "main_executable": {
     "file_name": "VPN启动器.exe",
     "size_bytes": 27767337,
-    "sha256": "2f06637370397776a02162107c06df2477b06a079e10ed6738b6655dc7a1d785"
+    "sha256": "2ec60432a54fac71d6204651acb057c772e3a2906a6593493c2556c685061827"
   },
   "installer_package": {
-    "file_name": "VPN启动器_3.1.0.97_安装程序.exe",
-    "size_bytes": 20887192,
-    "sha256": "93e9ec7c2cd2cac97c4cb5ef57e708fb57bf3295a4333a475e694518bd98a389"
+    "file_name": "VPN启动器_3.1.0.98_安装程序.exe",
+    "size_bytes": 20887387,
+    "sha256": "c00adadbcf1f775750ba944fed6d29180c74065a9101b54800f68d0ee89c3373"
   },
   "release_notes": [
     {
       "title": "优化内容",
       "items": [
-        "记住密码改为清晰的绿色勾选样式，不再受Windows主题影响显示为叉号。",
-        "登录、查看日志和退出VPN按钮文字严格居中，登录按钮移除造成视觉偏移的箭头。"
+        "版本号与主程序、云控同步至 3.1.0.98，本次不改变 VPN 业务功能。"
       ]
     }
   ],
-  "published_at": "2026-09-16T06:02:18Z",
+  "published_at": "2026-09-16T16:18:10Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "JDwfE5/zZ+Su6Ntthy10NL0iGCgjjmoYG0uD8TMz2K+nbgyYvqN0DCQzhR8Fc4Qa0I53HlTSB9t+0hP/dtXXAw=="
+    "value": "5hZ6DIdZdCXpPNPnXIF00voqj43d2WTgiPIhX0qNIZCP3ogFk6e9aopoH3XK+M4HCiVSRldpZEv5Bl1O0khjAw=="
   }
 }
