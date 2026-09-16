@@ -2,40 +2,43 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.97",
+  "version": "3.1.0.98",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.97.zip",
-  "package_size_bytes": 183796879,
-  "package_sha256": "54a347b83ae6b768fd96dd218fc92de781122f0c2447adbc718720f1dc1150ed",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.97/sfzcx_installer_update_3.1.0.97.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.98.zip",
+  "package_size_bytes": 183803395,
+  "package_sha256": "0e7dedd126058ac08893b6aedcb49efd419a7daa9e9e6379a8f0ef75b6c797a6",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.98/sfzcx_installer_update_3.1.0.98.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 192035732,
-    "sha256": "c0178d22a6dc80a2e8fd62a35d39cd222f344bd1de55029b578b6bad20d3f035"
+    "size_bytes": 192038644,
+    "sha256": "54efd4e4a3ff01d91c00b7c300fe2c627c849746542bc6245c88abad03a67c7a"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.97_安装程序.exe",
-    "size_bytes": 184288489,
-    "sha256": "08711371cebee40ca5405d7544e8cd27706cd6fb16a8f6cfc63cf3647646c666"
+    "file_name": "身份查询与签到管理系统_3.1.0.98_安装程序.exe",
+    "size_bytes": 184293639,
+    "sha256": "dc80495b639c569ede25875f59cf136b410b8dea829caf0b5eff670884fab391"
   },
   "release_notes": [
     {
       "title": "新增功能",
       "items": [
-        "摄像头持续在本机分析完整画面和左右边缘区域，发现疑似举手机拍照后立即上传证据照片并提示。",
-        "主窗口阻止常见软件截图，进入系统后检测并关闭明确识别出的截图录屏专用工具，同时上传安全证据。"
+        "检测到疑似手机拍照、截图或录屏时立即锁定软件，必须输入云控当天的安全解锁授权码后才能继续使用。",
+        "进入主系统时立即检查已打开的截图录屏专用工具，发现后关闭工具、上传安全证据并锁定软件。",
+        "测试账号进入主系统后显示摄像头实时预览，可直接核对完整取景范围；正式考点账号不显示该画面。"
       ]
     },
     {
       "title": "优化内容",
       "items": [
-        "摄像头优先请求 1080p 画面，提高远处和画面边缘手机的识别机会；云控新增手机告警和截图录屏告警分类。"
+        "手机检测间隔缩短，锁定提示不再等待照片上传完成。",
+        "15分钟定时抓拍改为第14分钟准备摄像头、第15分钟抓拍上传；手机和截图录屏检测始终保持运行。",
+        "修复安全解锁授权码在主程序本地被误判为无效操作类型的问题。"
       ]
     }
   ],
-  "published_at": "2026-09-16T06:02:11Z",
+  "published_at": "2026-09-16T16:18:02Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "QZaZJXNnjc1zMnRDiJHxe3DiJpA2XHkfS/WL1Y7oAdd44fZ9smgPatHi0uIs84T2BEFY3/oczk53gNxkE9L7Bg=="
+    "value": "fZ1jEgQOpcBwE6fsUdQvPjHleHkhmPCZlHB27st2An7LaXXur/w543xg4N8WtexFO3A3yaqH4OHV7/SaXgiIBA=="
   }
 }
