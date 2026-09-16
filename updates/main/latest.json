@@ -2,40 +2,40 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.96",
+  "version": "3.1.0.97",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.96.zip",
-  "package_size_bytes": 149498846,
-  "package_sha256": "1d465a6fbde0e4707587617cfc3803afb459258fd819f683f8d978a3504fa9d3",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.96/sfzcx_installer_update_3.1.0.96.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.97.zip",
+  "package_size_bytes": 183796879,
+  "package_sha256": "54a347b83ae6b768fd96dd218fc92de781122f0c2447adbc718720f1dc1150ed",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.97/sfzcx_installer_update_3.1.0.97.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 157702813,
-    "sha256": "6f43be791b91cb7ca5f7887637493973d705172f91e24e9c3aeb2178b0efd823"
+    "size_bytes": 192035732,
+    "sha256": "c0178d22a6dc80a2e8fd62a35d39cd222f344bd1de55029b578b6bad20d3f035"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.96_安装程序.exe",
-    "size_bytes": 149992592,
-    "sha256": "57af72697d4266d5807454e175584ae24c9001db21ed7f1c3cc121c601365dd4"
+    "file_name": "身份查询与签到管理系统_3.1.0.97_安装程序.exe",
+    "size_bytes": 184288489,
+    "sha256": "08711371cebee40ca5405d7544e8cd27706cd6fb16a8f6cfc63cf3647646c666"
   },
   "release_notes": [
     {
       "title": "新增功能",
       "items": [
-        "登录成功后、软件许可协议前新增摄像头身份确认，支持选择 USB 摄像头或电脑内置摄像头，完成首次拍照并成功上传后才能继续。",
-        "进入主系统后每隔15分钟自动抓拍并上传云控，界面持续显示摄像头监控状态，照片不关联考生信息。"
+        "摄像头持续在本机分析完整画面和左右边缘区域，发现疑似举手机拍照后立即上传证据照片并提示。",
+        "主窗口阻止常见软件截图，进入系统后检测并关闭明确识别出的截图录屏专用工具，同时上传安全证据。"
       ]
     },
     {
       "title": "优化内容",
       "items": [
-        "云控新增摄像头记录栏目，按考点区分首次拍照和定时抓拍；照片仅授权管理员可查看和删除。"
+        "摄像头优先请求 1080p 画面，提高远处和画面边缘手机的识别机会；云控新增手机告警和截图录屏告警分类。"
       ]
     }
   ],
-  "published_at": "2026-09-15T15:23:20Z",
+  "published_at": "2026-09-16T06:02:11Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "rZB3qwFy7rwbvkB/tU5TGyRLR+u/g++HiokGmJ8nLUDjGru4NTHpZ1HMiNNnGY8uBow3jdxj9lbsI4zwSMKGCw=="
+    "value": "QZaZJXNnjc1zMnRDiJHxe3DiJpA2XHkfS/WL1Y7oAdd44fZ9smgPatHi0uIs84T2BEFY3/oczk53gNxkE9L7Bg=="
   }
 }
