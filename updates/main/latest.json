@@ -2,40 +2,34 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.101",
+  "version": "3.1.0.102",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.101.zip",
-  "package_size_bytes": 184096958,
-  "package_sha256": "1846fea0665d0675631a0729e14956a7a7f1c3d2da765c8b36088d59401205b0",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.101/sfzcx_installer_update_3.1.0.101.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.102.zip",
+  "package_size_bytes": 184093299,
+  "package_sha256": "a90dfb20492c2d1c8b3534a88632dc79cd836ac8ac1ccff0039fa9e71e508025",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.102/sfzcx_installer_update_3.1.0.102.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 192040195,
-    "sha256": "3ec9ad53f37c0bbc03e11f0b163912c9aa6aaa3e0b697481909cba6494469ebd"
+    "size_bytes": 192040314,
+    "sha256": "29f45f2982a02fbda9a27723f1608a5f6a7686310738db55c2b13f74d45f9c34"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.101_安装程序.exe",
-    "size_bytes": 184588297,
-    "sha256": "a6c6fcead7e273dc1162da0ff3438f7eb885ad049ac38820b3fc718a35f0973c"
+    "file_name": "身份查询与签到管理系统_3.1.0.102_安装程序.exe",
+    "size_bytes": 184586069,
+    "sha256": "6094ec4d7de8fc48f614759e273bd4d77ca19f6f5060073281ac370784754e99"
   },
   "release_notes": [
     {
-      "title": "新增功能",
-      "items": [
-        "云控接口统一使用 /api/，云控域名继续负责登录、心跳、数据回收和后台管理。",
-        "在线更新优先从独立更新域名直连下载，连接失败时自动回退 GitHub。"
-      ]
-    },
-    {
       "title": "优化内容",
       "items": [
-        "更新清单和安装包继续执行数字签名、大小与 SHA-256 校验，下载域名异常不会影响云控业务连接。"
+        "云控与在线更新统一使用 kongzhitai.cn，升级包通过同一 HTTPS 域名下载。",
+        "更新域名连接失败时继续回退 GitHub，并保留数字签名、大小和 SHA-256 完整性校验。"
       ]
     }
   ],
-  "published_at": "2026-09-20T13:05:27Z",
+  "published_at": "2026-09-20T17:23:49Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "fiW9YXxVhI4iFBigCdprxJDXwUQWtzFMJHmLFXtwL/eeyBgYenmxBWPdXzdzSCWZj/GnATEPq4X0atlSxv8aCg=="
+    "value": "jOzq8mGc0XPg6wpQuZO18s6NsIO4EuncjZESdlfju9kndTaybneiaxBpJfI0UESD+Qh7znhJ76LXaJgoSOITAw=="
   }
 }
