@@ -2,35 +2,40 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.100",
+  "version": "3.1.0.101",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.100.zip",
-  "package_size_bytes": 184095413,
-  "package_sha256": "411028314a1ec0b550f32d9df5253deef885d44c3865653b7cb19523ce040c32",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.100/sfzcx_installer_update_3.1.0.100.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.101.zip",
+  "package_size_bytes": 184096958,
+  "package_sha256": "1846fea0665d0675631a0729e14956a7a7f1c3d2da765c8b36088d59401205b0",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.101/sfzcx_installer_update_3.1.0.101.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 192038853,
-    "sha256": "d98a291b8e413fd5df46aa0b843f8a3149092bbfc1495290c8a4cbb4646c6f28"
+    "size_bytes": 192040195,
+    "sha256": "3ec9ad53f37c0bbc03e11f0b163912c9aa6aaa3e0b697481909cba6494469ebd"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.100_安装程序.exe",
-    "size_bytes": 184586288,
-    "sha256": "59a8ba763c3a08abfc2d9955971255fd7272efd9fb34aa1399f7456a12d6bb95"
+    "file_name": "身份查询与签到管理系统_3.1.0.101_安装程序.exe",
+    "size_bytes": 184588297,
+    "sha256": "a6c6fcead7e273dc1162da0ff3438f7eb885ad049ac38820b3fc718a35f0973c"
   },
   "release_notes": [
     {
+      "title": "新增功能",
+      "items": [
+        "云控接口统一使用 /api/，云控域名继续负责登录、心跳、数据回收和后台管理。",
+        "在线更新优先从独立更新域名直连下载，连接失败时自动回退 GitHub。"
+      ]
+    },
+    {
       "title": "优化内容",
       "items": [
-        "增强近距离手机识别，优先分析完整画面和中心区域，并提高检测画面的清晰度与响应速度。",
-        "主程序在线更新期间支持最小化更新窗口。",
-        "完整安装器加入运行库 DLL，并在安装目录写入隐藏的软件服务 IP 与精确更新时间记录。"
+        "更新清单和安装包继续执行数字签名、大小与 SHA-256 校验，下载域名异常不会影响云控业务连接。"
       ]
     }
   ],
-  "published_at": "2026-09-20T12:06:34Z",
+  "published_at": "2026-09-20T13:05:27Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "LdUvTBAS/QM7QYLVXAwmaxpRnOwx1eL9kxo5SzN+H83CZFY4BXnuYckIxK6SOs6ClSXzZ9s6bk7/6CMwMkzLBg=="
+    "value": "fiW9YXxVhI4iFBigCdprxJDXwUQWtzFMJHmLFXtwL/eeyBgYenmxBWPdXzdzSCWZj/GnATEPq4X0atlSxv8aCg=="
   }
 }
