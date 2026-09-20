@@ -2,33 +2,33 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-vpn",
-  "version": "3.1.0.99",
+  "version": "3.1.0.100",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_vpn_installer_update_3.1.0.99.zip",
-  "package_size_bytes": 20374962,
-  "package_sha256": "16a6c4f59834a905078944b0e051bf32d50d799e9f837c73facbe08dcd3c2e8f",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.99/sfzcx_vpn_installer_update_3.1.0.99.zip",
+  "package_file_name": "sfzcx_vpn_installer_update_3.1.0.100.zip",
+  "package_size_bytes": 20375317,
+  "package_sha256": "2d67730b8088b674bed3cd3043a6feb1b850b857a63876aa7556ca50b5e19e30",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.100/sfzcx_vpn_installer_update_3.1.0.100.zip",
   "main_executable": {
     "file_name": "VPN启动器.exe",
     "size_bytes": 27767350,
-    "sha256": "b7caad89f924660f853b197722675436697dd1be721aed1ff5551db18f8fc484"
+    "sha256": "ba6ffe88d7651bad806577a899dd540920c7757b6cbb795bd257ebee31c4ebf2"
   },
   "installer_package": {
-    "file_name": "VPN启动器_3.1.0.99_安装程序.exe",
-    "size_bytes": 20887233,
-    "sha256": "d450aef73b6b614ed7722901dfee04a468e745c4e478870dc4ed5825f64277dc"
+    "file_name": "VPN启动器_3.1.0.100_安装程序.exe",
+    "size_bytes": 20887242,
+    "sha256": "39315bbd8fb941c89c5ea71630e585106efae5f797e871b05dc6ee3c267406de"
   },
   "release_notes": [
     {
       "title": "优化内容",
       "items": [
-        "版本号与主程序、云控同步至 3.1.0.99，本次不改变 VPN 业务功能。"
+        "版本号与主程序、云控同步至 3.1.0.100，本次不改变 VPN 业务功能。"
       ]
     }
   ],
-  "published_at": "2026-09-16T16:30:17Z",
+  "published_at": "2026-09-20T12:06:43Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "mngXYhHjaq8ToVxD5XPgidp5Zfa/Tn03ixjkF4yKZaDZ9P3iZInk3oaLQNwsqro3OG1gfcFvMMklVYgBawJ5DQ=="
+    "value": "JQ7sVV40NyOG+mTABmmE8e8Jc2t7dbKJ2M4yEztEX5ehXFj/s7yIviYG5gj1V9kVmB6oqWPSqsSDMpsjl0JlCQ=="
   }
 }
