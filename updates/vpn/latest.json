@@ -2,33 +2,33 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-vpn",
-  "version": "3.1.0.101",
+  "version": "3.1.0.102",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_vpn_installer_update_3.1.0.101.zip",
-  "package_size_bytes": 20376133,
-  "package_sha256": "b64fbe2ac501637ec60d07b409ac02cfc0993fa506ee261eb1504e19443aeef4",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.101/sfzcx_vpn_installer_update_3.1.0.101.zip",
+  "package_file_name": "sfzcx_vpn_installer_update_3.1.0.102.zip",
+  "package_size_bytes": 20376023,
+  "package_sha256": "3de537d6544254f2a2fe4a2a74a488b5ccf9ff28fb8b2bbc0c2f85eb00fc1faf",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/vpn-v3.1.0.102/sfzcx_vpn_installer_update_3.1.0.102.zip",
   "main_executable": {
     "file_name": "VPN启动器.exe",
-    "size_bytes": 27768437,
-    "sha256": "5dfc6a2254f45a05a365fde9c91eb2e9c1fde83ec753becc24c48e6b3d84c45e"
+    "size_bytes": 27768457,
+    "sha256": "dc699f7675181ffdb545e033ee0f32fce34c46065d65aa50d7bf7ac2bc7474f2"
   },
   "installer_package": {
-    "file_name": "VPN启动器_3.1.0.101_安装程序.exe",
-    "size_bytes": 20888478,
-    "sha256": "dad4a0faf854ef938e243549761b26975b90f83a5e8274f8e08848566eb5f323"
+    "file_name": "VPN启动器_3.1.0.102_安装程序.exe",
+    "size_bytes": 20887924,
+    "sha256": "94b31b19b8398f9a2b4899dcd5b75b1171e3793068d80e9dbaef62d197b580a3"
   },
   "release_notes": [
     {
       "title": "优化内容",
       "items": [
-        "版本号与主程序、云控同步至 3.1.0.101；在线更新优先从 sfcxzy.ltd 直连下载，连接失败时回退 GitHub。"
+        "版本号与主程序、云控同步至 3.1.0.102；在线更新与云控共用 kongzhitai.cn，HTTPS 下载失败时回退 GitHub。"
       ]
     }
   ],
-  "published_at": "2026-09-20T13:05:44Z",
+  "published_at": "2026-09-20T17:23:56Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "D4Auxj0nYnSj3/coFx1J0VTiOwYH0cWbcXS2/dz+CpcU1cu+C4OIAZCHu3U9vtgjwLZ7pByAk2h6q7C2m6HhDw=="
+    "value": "pHcpFdV5rSnIr1jjPs4rwRR0Tn/Okzcgo/AxiJ/Fpb/UlVT2w5g7hUCHrY1/E1MN4mCn8473DwmQrDm/8J7rBA=="
   }
 }
