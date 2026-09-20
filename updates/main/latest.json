@@ -2,39 +2,35 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.99",
+  "version": "3.1.0.100",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.99.zip",
-  "package_size_bytes": 183799772,
-  "package_sha256": "2742a2f850fa1f7ae350b1d0379464900b8cac650ff9c8aafb8b8d944c5a5e6d",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.99/sfzcx_installer_update_3.1.0.99.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.100.zip",
+  "package_size_bytes": 184095413,
+  "package_sha256": "411028314a1ec0b550f32d9df5253deef885d44c3865653b7cb19523ce040c32",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.100/sfzcx_installer_update_3.1.0.100.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 192038695,
-    "sha256": "b5e78e684e4c4a822f1bcc6e44212032e3cf968256557b96e949497b44d04195"
+    "size_bytes": 192038853,
+    "sha256": "d98a291b8e413fd5df46aa0b843f8a3149092bbfc1495290c8a4cbb4646c6f28"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.99_安装程序.exe",
-    "size_bytes": 184292358,
-    "sha256": "4fca15813a055519f009308635c97052714e7ffad7d9ebffe90b5b9af0308d90"
+    "file_name": "身份查询与签到管理系统_3.1.0.100_安装程序.exe",
+    "size_bytes": 184586288,
+    "sha256": "59a8ba763c3a08abfc2d9955971255fd7272efd9fb34aa1399f7456a12d6bb95"
   },
   "release_notes": [
     {
-      "title": "新增功能",
-      "items": [
-        "测试账号进入主系统后显示摄像头实时预览，可直接核对完整取景范围；正式考点账号不显示该画面。"
-      ]
-    },
-    {
       "title": "优化内容",
       "items": [
-        "修复输入云控安全解锁授权码时提示“操作授权类型无效”的问题。"
+        "增强近距离手机识别，优先分析完整画面和中心区域，并提高检测画面的清晰度与响应速度。",
+        "主程序在线更新期间支持最小化更新窗口。",
+        "完整安装器加入运行库 DLL，并在安装目录写入隐藏的软件服务 IP 与精确更新时间记录。"
       ]
     }
   ],
-  "published_at": "2026-09-16T16:30:08Z",
+  "published_at": "2026-09-20T12:06:34Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "zU+hQOZrFCa7XxUWLa43hqiDfFHU0Xc35CwqTHTbPnyloq80QYig6DW4aR3cs1AjxXI1N06P6Q5/B0mcATpVBA=="
+    "value": "LdUvTBAS/QM7QYLVXAwmaxpRnOwx1eL9kxo5SzN+H83CZFY4BXnuYckIxK6SOs6ClSXzZ9s6bk7/6CMwMkzLBg=="
   }
 }
