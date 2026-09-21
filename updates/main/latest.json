@@ -2,34 +2,40 @@
   "schema_version": 1,
   "kind": "sfzcx-github-update-channel",
   "app_id": "sfzcx-main",
-  "version": "3.1.0.102",
+  "version": "3.1.0.103",
   "package_mode": "installer",
-  "package_file_name": "sfzcx_installer_update_3.1.0.102.zip",
-  "package_size_bytes": 184093299,
-  "package_sha256": "a90dfb20492c2d1c8b3534a88632dc79cd836ac8ac1ccff0039fa9e71e508025",
-  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.102/sfzcx_installer_update_3.1.0.102.zip",
+  "package_file_name": "sfzcx_installer_update_3.1.0.103.zip",
+  "package_size_bytes": 184096059,
+  "package_sha256": "aa2a07d100de162ced4c1ee6c4ef11c2073f4250fa93b0e509d343fc83717998",
+  "download_url": "https://github.com/lanlanlan-web/sj/releases/download/main-v3.1.0.103/sfzcx_installer_update_3.1.0.103.zip",
   "main_executable": {
     "file_name": "身份查询与签到管理系统.exe",
-    "size_bytes": 192040314,
-    "sha256": "29f45f2982a02fbda9a27723f1608a5f6a7686310738db55c2b13f74d45f9c34"
+    "size_bytes": 192042793,
+    "sha256": "a9c8e20d6e791aa5095c59d32fb7e282301bac2949bfe188fcc17ab69df17394"
   },
   "installer_package": {
-    "file_name": "身份查询与签到管理系统_3.1.0.102_安装程序.exe",
-    "size_bytes": 184586069,
-    "sha256": "6094ec4d7de8fc48f614759e273bd4d77ca19f6f5060073281ac370784754e99"
+    "file_name": "身份查询与签到管理系统_3.1.0.103_安装程序.exe",
+    "size_bytes": 184589446,
+    "sha256": "522d87dfc6bb6626d541694d414c58aa64929c79c61498d6f620c77349325013"
   },
   "release_notes": [
     {
+      "title": "新增功能",
+      "items": [
+        "测试账号摄像头预览默认收纳为左下角摄像头按钮，点击后展开完整实时画面。",
+        "云控摄像头记录页面新增按考点发起的实时预览；考点端会明确显示管理员正在预览，停止后实时画面立即失效且不写入照片归档。"
+      ]
+    },
+    {
       "title": "优化内容",
       "items": [
-        "云控与在线更新统一使用 kongzhitai.cn，升级包通过同一 HTTPS 域名下载。",
-        "更新域名连接失败时继续回退 GitHub，并保留数字签名、大小和 SHA-256 完整性校验。"
+        "在线更新窗口支持最小化，并同步收起主程序窗口，更新会在后台继续进行。"
       ]
     }
   ],
-  "published_at": "2026-09-20T17:23:49Z",
+  "published_at": "2026-09-21T03:35:33Z",
   "signature": {
     "algorithm": "ed25519",
-    "value": "jOzq8mGc0XPg6wpQuZO18s6NsIO4EuncjZESdlfju9kndTaybneiaxBpJfI0UESD+Qh7znhJ76LXaJgoSOITAw=="
+    "value": "jeQWth5IJPjSKpeRYc0lYSuaAjb/veClUyBE6N2rGLX0xLJWVdWhLcMmsvMTOX9PuHGbklQ6q9HLtWJabVrzDg=="
   }
 }
